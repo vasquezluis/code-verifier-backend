@@ -1,3 +1,7 @@
 node_modules/
 dist/
 comandos.txt
+.env
+
+__test__
+coverage/
