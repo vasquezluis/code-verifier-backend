@@ -3,5 +3,5 @@ dist/
 comandos.txt
 .env
 
-__test__
+__test__/
 coverage/
