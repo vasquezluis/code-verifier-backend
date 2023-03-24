@@ -8,11 +8,15 @@ const PORT: string | number = process.env.PORT || 3000;
 const app: Express = express();
 
 app.get("/", (req: Request, res: Response) => {
-  res.send("hola mundo");
+  res.status(200).json({ data: { message: "Goodbye world!" } });
 });
 
 app.get("/hello", (req: Request, res: Response) => {
-  res.send("bye");
+  const name = req.query.name;
+
+  res
+    .status(200)
+    .json({ data: { message: `Hola, ${name ? name : "anonimo"}` } });
 });
 
 app.listen(PORT, () => {
